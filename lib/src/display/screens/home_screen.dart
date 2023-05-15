@@ -5,7 +5,13 @@ import 'package:uitemps/src/display/screens/cards_screen.dart';
 import 'package:uitemps/src/display/screens/circle_avatars.dart';
 import 'package:uitemps/src/display/screens/comments_screen.dart';
 import 'package:uitemps/src/display/screens/datetime_screen.dart';
+import 'package:uitemps/src/display/screens/dialog_screen.dart';
+import 'package:uitemps/src/display/screens/drawers_screen.dart';
+import 'package:uitemps/src/display/screens/image_picker_screen.dart';
+import 'package:uitemps/src/display/screens/indicators_screen.dart';
+import 'package:uitemps/src/display/screens/search_bars_screen.dart';
 import 'package:uitemps/src/display/screens/seperators_screen.dart';
+import 'package:uitemps/src/display/screens/snackbars_screen.dart';
 import 'package:uitemps/src/display/widgets/buttons/custom_button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,62 +21,91 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        body: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 50,
-              ),
-              ContX(
-                  "Buttons",
-                  () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ButtonsScreen()),
-                      )),
-              ContX(
-                  "Cards",
-                  () => Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => CardsScreen()),
-                      )),
-              ContX(
-                  "Banners",
-                  () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => BannersScreen()),
-                      )),
-              ContX(
-                  "Circle Avatars",
-                  () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => CircleAvatarsScreen()),
-                      )),
-              ContX(
-                  "Comments",
-                  () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => CommentsScreen()),
-                      )),
-              ContX(
-                  "Seperators",
-                  () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => SeperatorsScreen()),
-                      )),
-              ContX(
-                  "Date Time",
-                  () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => DateTimeScreen()),
-                      )),
-            ]),
+        body: ListView(children: [
+          SizedBox(
+            height: 50,
+          ),
+          ContX(
+              "Buttons",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ButtonsScreen()),
+                  )),
+          ContX(
+              "Cards",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CardsScreen()),
+                  )),
+          ContX(
+              "Banners",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => BannersScreen()),
+                  )),
+          ContX(
+              "Circle Avatars",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CircleAvatarsScreen()),
+                  )),
+          ContX(
+              "Comments",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CommentsScreen()),
+                  )),
+          ContX(
+              "Seperators",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SeperatorsScreen()),
+                  )),
+          ContX(
+              "DateTime",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DateTimeScreen()),
+                  )),
+          ContX(
+              "Dialogs",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DialogsScreen()),
+                  )),
+          ContX(
+              "Drawers",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DrawersScreen()),
+                  )),
+          ContX(
+              "Image Picker",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ImagePickerScreen()),
+                  )),
+          ContX(
+              "Loading Indicators",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => IndicatorsScreen()),
+                  )),
+          ContX(
+              "Search Bars",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SearchBarsScreen()),
+                  )),
+          ContX(
+              "Snack Bars",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SnackbarsScreen()),
+                  )),
+        ]),
       ),
     );
   }

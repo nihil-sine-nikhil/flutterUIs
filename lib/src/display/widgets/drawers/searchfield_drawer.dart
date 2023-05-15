@@ -3,60 +3,64 @@ import 'package:flutter/material.dart';
 class DrawerWithSearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: Material(
-        color: Color(0xff4338CA),
-        child: ListView(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(15.0),
-              child: Column(
-                children: [
-                  const SizedBox(height: 12),
-                  SearchFieldDrawer(),
-                  const SizedBox(height: 12),
-                  MenuItem(
-                    text: 'Friends',
-                    icon: Icons.people,
-                    onClicked: () => selectedItem(context, 0),
-                  ),
-                  const SizedBox(height: 5),
-                  MenuItem(
-                    text: 'Liked Photos',
-                    icon: Icons.favorite_border,
-                    onClicked: () => selectedItem(context, 1),
-                  ),
-                  const SizedBox(height: 5),
-                  MenuItem(
-                    text: 'Workflow',
-                    icon: Icons.workspaces_outline,
-                    onClicked: () => selectedItem(context, 2),
-                  ),
-                  const SizedBox(height: 5),
-                  MenuItem(
-                    text: 'Updates',
-                    icon: Icons.update,
-                    onClicked: () => selectedItem(context, 3),
-                  ),
-                  const SizedBox(height: 8),
-                  Divider(color: Colors.white70),
-                  const SizedBox(height: 8),
-                  MenuItem(
-                    text: 'Notifications',
-                    icon: Icons.notifications_outlined,
-                    onClicked: () => selectedItem(context, 5),
-                  ),
-                  MenuItem(
-                    text: 'Settings',
-                    icon: Icons.settings,
-                    onClicked: () => selectedItem(context, 6),
-                  ),
-                ],
+    return Scaffold(
+      appBar: AppBar(),
+      drawer: Drawer(
+        child: Material(
+          color: Color(0xff4338CA),
+          child: ListView(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.all(15.0),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 12),
+                    SearchFieldDrawer(),
+                    const SizedBox(height: 12),
+                    MenuItem(
+                      text: 'Friends',
+                      icon: Icons.people,
+                      onClicked: () => selectedItem(context, 0),
+                    ),
+                    const SizedBox(height: 5),
+                    MenuItem(
+                      text: 'Liked Photos',
+                      icon: Icons.favorite_border,
+                      onClicked: () => selectedItem(context, 1),
+                    ),
+                    const SizedBox(height: 5),
+                    MenuItem(
+                      text: 'Workflow',
+                      icon: Icons.workspaces_outline,
+                      onClicked: () => selectedItem(context, 2),
+                    ),
+                    const SizedBox(height: 5),
+                    MenuItem(
+                      text: 'Updates',
+                      icon: Icons.update,
+                      onClicked: () => selectedItem(context, 3),
+                    ),
+                    const SizedBox(height: 8),
+                    Divider(color: Colors.white70),
+                    const SizedBox(height: 8),
+                    MenuItem(
+                      text: 'Notifications',
+                      icon: Icons.notifications_outlined,
+                      onClicked: () => selectedItem(context, 5),
+                    ),
+                    MenuItem(
+                      text: 'Settings',
+                      icon: Icons.settings,
+                      onClicked: () => selectedItem(context, 6),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
+      body: Column(children: []),
     );
   }
 
