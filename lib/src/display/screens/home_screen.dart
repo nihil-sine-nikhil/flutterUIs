@@ -12,6 +12,8 @@ import 'package:uitemps/src/display/screens/indicators_screen.dart';
 import 'package:uitemps/src/display/screens/search_bars_screen.dart';
 import 'package:uitemps/src/display/screens/seperators_screen.dart';
 import 'package:uitemps/src/display/screens/snackbars_screen.dart';
+import 'package:uitemps/src/display/screens/textfields_screen.dart';
+import 'package:uitemps/src/display/screens/toggle_buttons_screen.dart';
 import 'package:uitemps/src/display/widgets/buttons/custom_button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -104,6 +106,19 @@ class HomeScreen extends StatelessWidget {
               () => Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => SnackbarsScreen()),
+                  )),
+          ContX(
+              "Text Fields",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TextFieldsScreen()),
+                  )),
+          ContX(
+              "Toggle Buttons",
+              () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ToggleButtonsScreen()),
                   )),
         ]),
       ),
